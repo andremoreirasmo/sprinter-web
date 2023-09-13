@@ -1,0 +1,21 @@
+.item {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  background-color: var(--secondary-color);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.384);
+    background: rgba(var(--primary-base), 0.5);
+  }
+
+  .anticon {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+}
