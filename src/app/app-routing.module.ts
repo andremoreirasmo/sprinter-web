@@ -13,6 +13,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/settings/settings.module').then((m) => m.SettingsModule),
   },
+  {
+    path: 'settings/workspace',
+    loadChildren: () =>
+      import('./pages/workspace/workspace.module').then(
+        (m) => m.WorkspaceModule
+      ),
+  },
 ];
 
 @NgModule({

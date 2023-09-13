@@ -3,8 +3,16 @@
   nzAllowClear
   nzPlaceHolder="Selecione um workspace"
   [(ngModel)]="selectedValue"
+  [nzDropdownRender]="newWorkspaceTemplate"
 >
   <nz-option nzLabel="Financeiro e Fiscal" nzValue="fiscal"></nz-option>
   <nz-option nzLabel="PDV" nzValue="pdv"></nz-option>
   <nz-option nzLabel="Akashi" nzValue="akashi"></nz-option>
 </nz-select>
+
+<ng-template #newWorkspaceTemplate>
+  <nz-divider></nz-divider>
+  <div class="container">
+    <a class="add-item" routerLink="/settings/workspace"> Criar workspace </a>
+  </div>
+</ng-template>
