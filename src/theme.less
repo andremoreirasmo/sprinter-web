@@ -7,19 +7,24 @@
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 
 @primary-color: #F4C778;
+@primary-color-semi-transp: #f4c77865;
+
+@main-color-background: #222529;
+@second-color-background: #282B2E;
 
 // Layout
-@layout-body-background: #282B2E;
-@layout-sider-background: #222529;
-@layout-header-background: #222529;
+@layout-body-background: @main-color-background;
+@layout-sider-background: @second-color-background;
+@layout-header-background: @second-color-background;
 @layout-header-color: white;
 
 // Background color for `<body>`
-@body-background: #282B2E;
+@body-background: @main-color-background;
 // Base background color for most components
-@component-background: #282B2E;
+// @component-background: @main-color-background;
+@component-background: @main-color-background;
 @text-color: white;
-@text-color-secondary: #F4C778;
+@text-color-secondary: @primary-color;
 @heading-color: @menu-dark-color;
 
 @select-item-selected-bg: rgba(217, 217, 217, 0.719);
@@ -31,3 +36,31 @@
 
 // Divider
 @divider-color: rgba(217, 217, 217, 0.3);
+
+// Card
+// ---
+@card-actions-background: @second-color-background;
+@card-background: @second-color-background;
+
+
+// Buttons
+@btn-primary-color: black;
+
+@input-addon-bg: inherit;
+
+
+// TimePicker
+// ---
+@picker-basic-cell-hover-color: @primary-color;
+@picker-basic-cell-active-with-range-color:
+@picker-border-color: @primary-color;
+@picker-basic-cell-hover-color: @primary-color;
+@picker-date-hover-range-color: #7ae60f96;
+@picker-date-hover-range-border-color: @primary-color;
+
+
+// Table
+// --
+@table-header-bg: @second-color-background;
+@table-row-hover-bg: @primary-color-semi-transp;
+@border-color-split: rgba(255, 255, 255, 0.493);

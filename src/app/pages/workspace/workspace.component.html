@@ -1,1 +1,37 @@
-<p>workspace works!</p>
+<nz-card [nzBordered]="false" nzTitle="Criar workspace">
+  <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="name" nzRequired>
+        <span>Nome</span>
+      </nz-form-label>
+      <nz-form-control
+        [nzSm]="14"
+        [nzXs]="24"
+        nzErrorTip="Por favor informe o nome!"
+      >
+        <input nz-input id="name" formControlName="name" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="url"
+        >Redmine - URL</nz-form-label
+      >
+      <nz-form-control [nzSm]="14" [nzXs]="24">
+        <input nz-input id="url" formControlName="url" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="apiKey"
+        >Redmine - Api Key</nz-form-label
+      >
+      <nz-form-control [nzSm]="14" [nzXs]="24">
+        <input nz-input type="password" id="apiKey" formControlName="apiKey" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row class="register-area">
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary">Criar</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</nz-card>

@@ -1,17 +1,11 @@
-nz-divider {
-  margin: 4px 0;
+[nz-form] {
+  max-width: 600px;
 }
 
-.container {
-  display: flex;
-  flex-wrap: nowrap;
-  padding: 8px;
+.phone-select {
+  width: 70px;
 }
 
-input {}
-
-.add-item {
-  flex: 0 0 auto;
-  padding: 8px;
-  display: block;
+.register-are {
+  margin-bottom: 8px;
 }

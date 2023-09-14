@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import en from '@angular/common/locales/en';
+import pt from '@angular/common/locales/pt';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
+import { setDefaultOptions } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { NZ_DATE_LOCALE, NZ_I18N, pt_BR } from 'ng-zorro-antd/i18n';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,12 +16,12 @@ import { AppComponent } from './app.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { ComponentsModule } from './shared/components/components.module';
 
-registerLocaleData(en);
+setDefaultOptions({ locale: ptBR });
+
+registerLocaleData(pt);
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,11 +31,13 @@ registerLocaleData(en);
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: pt_BR },
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    { provide: NZ_DATE_LOCALE, useValue: ptBR },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
